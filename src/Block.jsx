@@ -22,7 +22,7 @@ export const Block = ({ value, currency, onChangeValue, onChangeCurrency }) => (
     </ul>
     <input
       onChange={(e) => onChangeValue(e.target.value)}
-      value={value}
+      value={isNaN(value) ? '' : value}
       type="number"
       placeholder={0}
     />
